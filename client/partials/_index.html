@@ -1,0 +1,27 @@
+    <md-content layout-padding ng-controller='UserController' ng-cloak>
+        <form>
+            <div layout-gt-xs="row">
+                <md-input-container>
+                    <label>Name</label>
+                    <md-icon <i class="material-icons">account_box</i></md-icon>
+                    <input ng-model="newUser.name" type="text">
+                </md-input-container>
+            </div>
+            <div layout-gt-xs="row">
+                <md-input-container>
+                    <label>Favorite Language</label>
+                    <md-icon><i class="material-icons">code</i></md-icon>
+                    <input type="text" ng-model="newUser.favoriteLang">
+                </md-input-container>
+            </div>
+            <div layout-gt-xs="row">
+                <md-input-container>
+                    <label>Location</label>
+                    <md-icon><i class="material-icons">location_city</i></md-icon>
+                    <input type="text" ng-model="newUser.location">
+                </md-input-container>
+            </div>
+            <md-button ng-click="createUser()" class="md-raised md-primary">Add User</md-button>
+        </form>
+    </md-content>
+    <md-divider></md-divider>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app='UserModule'>
+
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="angular-material/angular-material.css">
+    <link rel="stylesheet" href="angular-data-grid/demo/material/css/angular-data-grid.material.css">
+</head>
+
+<body>
+    <md-toolbar class="md-hue-2">
+        <div class="md-toolbar-tools">
+            <h2><span>User Controller</span></h2>
+            <span flex></span>
+        <a href="#/users" class="md-raised">View Users</a>
+        </div>
+    </md-toolbar>
+    <div ng-view>
+    </div>
+
+    <script src="angular/angular.js"></script>
+    <script src="angular-route/angular-route.js" charset="utf-8"></script>
+    <script src="moment/moment.js" charset="utf-8"></script>
+    <script src="angular-moment/angular-moment.js" charset="utf-8"></script>
+    <script src="angular-aria/angular-aria.js"></script>
+    <script src="angular-animate/angular-animate.js"></script>
+    <script src="angular-material/angular-material.js"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <script src="factories/userFactory.js" charset="utf-8"></script>
+    <script src="controllers/userCtrl.js" charset="utf-8"></script>
+    <script src="angular-data-grid/dist/pagination.min.js"></script>
+    <script src="angular-data-grid/dist/dataGrid.min.js"></script>
+</body>
+
+</html>

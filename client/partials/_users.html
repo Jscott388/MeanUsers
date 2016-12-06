@@ -1,0 +1,45 @@
+<!-- <div layout-gt-xs="row" layout-xs="column" layout-align="stretch center">
+    <div layout="row" layout-align="center start">
+        <md-input-container md-no-float md-is-error="false" class="md-block flex-gt-xs flex-xs">
+            <input ng-model="lang" class="md-input" ng-change="gridActions.filter()" id="name" placeholder="Search language" filter-by="lang" filter-type="text" aria-invalid="false">
+        </md-input-container>
+    </div>
+    <div layout="row" layout-align="start center">
+        <md-datepicker ng-model="dateFrom" flex="100" md-placeholder="From Date" is-open="dateFromOpened" ng-click="dateFromOpened = true" filter-by="placed" filter-type="dateFrom" ng-change="gridActions.filter()"></md-datepicker>
+    </div>
+    <div layout="row" layout-align="start center">
+        <md-datepicker ng-model="dateTo" flex="100" md-placeholder="To Date" is-open="dateToOpened" ng-click="dateToOpened = true" filter-by="placed" filter-type="dateTo" ng-change="gridActions.filter()"></md-datepicker>
+    </div>
+</div> -->
+<div grid-data grid-options="gridOptions" grid-actions="gridActions" ng-controller='UserController'>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th sortable="name" class="sortable">
+                        <span>Name</span>
+                    </th>
+                    <th class="st-sort-disable th-dropdown">
+                        <md-select filter-by="statusDisplay" filter-type="select" ng-model="status" placeholder="Status" ng-change="filter()">
+                            <md-option value="">All Statuses</md-option>
+                        </md-select>
+                    </th>
+                    <th sortable='total.value' class="sortable">
+                        <span>Location</span>
+                    </th>
+                    <th sortable="placed" class="sortable">
+                        <span>Created</span>
+                    </th>
+                    <th><span>Actions</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat='user in users'>
+                    <td ng-bind='user.name'></td>
+                    <td ng-bind="user.favoriteLang"></td>
+                    <td ng-bind="user.location"></td>
+                    <td ng-bind="user.createdAt | date:'MM/dd/yyyy'"></td>
+                    <td><md-button class='btn' ng-click='deleteUser(user._id)'>Delete</md-button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
